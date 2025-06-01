@@ -1,36 +1,41 @@
 import java.util.*;
 
 class Solution {
+    
     int min;
     
     public int solution(int n, int[][] wires) {
+        
         min = n;
         
-        Map<Integer, List<Integer>> graph = new HashMap<>();
+        Map<Integer, List<Integer>> map = new HashMap<>();
         
-        for(int i = 1; i <= n; i++) {
-            graph.put(i, new ArrayList<>());
+        for (int i = 1; i <= n; i++) {
+            map.put(i, new ArrayList<>());
         }
         
         for (int[] wire : wires) {
-            graph.get(wire[0]).add(wire[1]);
-            graph.get(wire[1]).add(wire[0]);
+            map.get(wire[0]).add(wire[1]);
+            map.get(wire[1]).add(wire[0]);
         }
+        
         boolean[] visited = new boolean[n+1];
-        dfs(graph, visited, n, 1);
-    
+        
+        dfs(map, visited, 1, n);
+        
         return min;
     }
     
-    int dfs(Map<Integer, List<Integer>> graph, boolean[] visited, int n, int start) {
+    int dfs(Map<Integer, List<Integer>> map, boolean[] visited, int start, int n) {
         visited[start] = true;
         
-        List<Integer> cur = graph.get(start);
         int count = 1;
-        for (int i = 0; i < cur.size(); i++) {
-            if (!visited[cur.get(i)]) {
-                visited[cur.get(i)] = true;
-                count += dfs(graph, visited, n, cur.get(i));
+        
+        List<Integer> nexts = map.get(start);
+        
+        for(int next : nexts) {
+            if (!visited[next]) {
+                count += dfs(map, visited, next, n);
             }
         }
         
@@ -38,4 +43,5 @@ class Solution {
         
         return count;
     }
+    
 }
