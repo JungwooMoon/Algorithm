@@ -2,26 +2,25 @@ import java.util.*;
 
 class Solution {
     public List<List<Integer>> permute(int[] nums) {
-        List<List<Integer>> permu = new ArrayList<>();
-
-        backTrack(permu, new ArrayList<>(), nums);
-
-        return permu;
+        return backTrack(new ArrayList<>(), nums);    
     }
 
-    void backTrack(List<List<Integer>> ans, List<Integer> cur, int[] nums) {
+    List<List<Integer>> backTrack(List<Integer> cur, int[] nums) {
+        List<List<Integer>> ans = new ArrayList<>();
 
         if (cur.size() == nums.length) {
             ans.add(new ArrayList<>(cur));
+            return ans;
         } 
 
         for (int num : nums) {
             if (!cur.contains(num)) {
                 cur.add(num);
-                backTrack(ans, cur, nums);
+                ans.addAll(backTrack(cur, nums));
                 cur.remove(cur.size()-1);
             }
         }
+        return ans;
     }
 
 
