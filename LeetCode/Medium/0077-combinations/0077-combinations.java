@@ -12,11 +12,9 @@ class Solution {
         }
 
         for (int i = start; i <= n; i++) {
-            if (!cur.contains(i)) {
-                cur.add(i);
-                backTrack(ans, cur, i, n, k);
-                cur.remove(cur.size() - 1);
-            }
+            cur.add(i);
+            backTrack(ans, cur, i+1, n, k);
+            cur.remove(cur.size() - 1);
         }
     }
 }
