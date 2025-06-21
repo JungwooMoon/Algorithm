@@ -28,7 +28,7 @@ class Solution {
     
     boolean isValid(int x, int y, String[] place) {
         Queue<int []> queue = new ArrayDeque<>();
-        queue.offer(new int[] {x, y, 0, 0});
+        queue.offer(new int[] {x, y, 0});
         
         boolean[][] visited = new boolean[5][5];
         visited[x][y] = true;
@@ -48,12 +48,10 @@ class Solution {
                 if (nx >= 0 && ny >= 0 && nx < 5 && ny < 5) {
                     if (!visited[nx][ny]) {
                         if (place[nx].charAt(ny) == 'P') {
-                            if (cur[3] == 0) return false;
-                        } else if (place[nx].charAt(ny) == 'X') {
-                            queue.offer(new int[] {nx, ny, cur[2] + 1, 1});    
-                        } else {
-                            queue.offer(new int[] {nx, ny, cur[2] + 1, 0});   
-                        }
+                            return false;
+                        } else if (place[nx].charAt(ny) == 'O') {
+                            queue.offer(new int[] {nx, ny, cur[2] + 1});    
+                        } 
                     }
                 }
             }
