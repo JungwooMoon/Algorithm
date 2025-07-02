@@ -2,24 +2,25 @@ import java.util.*;
 
 class Solution {
     public List<List<Integer>> permute(int[] nums) {
-        return backTrack(new ArrayList<>(), nums);    
+        List<List<Integer>> ans = new ArrayList<>();
+        dfs(ans, nums, new boolean[nums.length], new ArrayList<>());
+        return ans;
     }
 
-    List<List<Integer>> backTrack(List<Integer> cur, int[] nums) {
-        List<List<Integer>> ans = new ArrayList<>();
-
+    void dfs(List<List<Integer>> ans, int[] nums, boolean[] visited, List<Integer> cur) {
         if (cur.size() == nums.length) {
             ans.add(new ArrayList<>(cur));
-            return ans;
-        } 
+            return;
+        }
 
-        for (int num : nums) {
-            if (!cur.contains(num)) {
-                cur.add(num);
-                ans.addAll(backTrack(cur, nums));
+        for (int i = 0; i < nums.length; i++) {
+            if (!visited[i]) {
+                visited[i] = true;
+                cur.add(nums[i]);
+                dfs(ans, nums, visited, cur);
+                visited[i] = false;
                 cur.remove(cur.size()-1);
             }
         }
-        return ans;
-    }  
+    }
 }
