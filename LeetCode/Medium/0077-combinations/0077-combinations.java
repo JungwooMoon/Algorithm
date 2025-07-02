@@ -1,20 +1,22 @@
 class Solution {
+
+
     public List<List<Integer>> combine(int n, int k) {
         List<List<Integer>> ans = new ArrayList<>();
-        backTrack(ans, new ArrayList<>(), 1, n, k);
+        dfs(ans, 1, n, new ArrayList<>(), k);
         return ans;
     }
 
-    void backTrack(List<List<Integer>> ans, List<Integer> cur, int start, int n, int k) {
+    void dfs (List<List<Integer>> ans, int s, int n, List<Integer> cur, int k) {
         if (cur.size() == k) {
             ans.add(new ArrayList<>(cur));
             return;
         }
 
-        for (int i = start; i <= n; i++) {
+        for (int i = s; i <= n; i++) {
             cur.add(i);
-            backTrack(ans, cur, i+1, n, k);
-            cur.remove(cur.size() - 1);
+            dfs(ans, i+1, n, cur, k);
+            cur.remove(cur.size()-1);
         }
     }
 }
