@@ -25,4 +25,16 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0739-daily-temperatures](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0739-daily-temperatures/) | Medium |
+## Depth-First Search
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0841-keys-and-rooms](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0841-keys-and-rooms/) | Medium |
+## Breadth-First Search
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0841-keys-and-rooms](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0841-keys-and-rooms/) | Medium |
+## Graph Theory
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0841-keys-and-rooms](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0841-keys-and-rooms/) | Medium |
 <!---LeetCode Topics End-->
