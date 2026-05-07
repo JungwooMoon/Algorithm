@@ -1,37 +1,41 @@
 class Solution {
     public int solution(String s) {
-        int test = 1;
-        int answer = s.length() + 1;
-        while (test <= s.length()) {
-            String val = "";
-            String temp = "";
+        int answer = s.length();
+        
+        for (int i = 1; i < s.length()/2+1; i++) {
+            String prev = s.substring(0, i);
+            String min = prev;
             int cnt = 1;
-            for(int i = 0; i < s.length(); i += test) {
-                String cur;
-                if (i+test >= s.length()) {
-                    cur = s.substring(i);
-                } else {
-                    cur = s.substring(i, i+test);
+            for (int j = i; j < s.length(); j+=i) {
+                if (j+i > s.length()) {
+                    if (cnt > 1) {
+                        min += Integer.toString(cnt);
+                    }
+                    
+                    min += s.substring(j, s.length());
+                    break;
                 }
                 
-                if (cur.equals(temp)) {
+                if (prev.equals(s.substring(j, j+i))) {
                     cnt++;
-                } else if (!cur.equals(temp)) {
-                    if (cnt > 1) {
-                        val += Integer.toString(cnt);
+                    if (j+i >= s.length()) {
+                        min += Integer.toString(cnt); 
                     }
-                    val += cur;
+                    
+                } else {
+                    if (cnt != 1) {
+                        min += Integer.toString(cnt);    
+                    }
                     cnt = 1;
+                    prev = s.substring(j, j+i);
+                    min += prev;
                 } 
-                
-                temp = cur;
             }
-            if (cnt > 1) {
-                val += Integer.toString(cnt);
-            }
-            test++;
-            answer = Math.min(answer, val.length());
+            
+            
+            answer = Math.min(min.length(), answer);
         }
+        
         return answer;
     }
 }
