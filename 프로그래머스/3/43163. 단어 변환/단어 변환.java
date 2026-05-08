@@ -2,36 +2,40 @@ import java.util.*;
 
 class Solution {
     public int solution(String begin, String target, String[] words) {
-        int answer = 0;
         Queue<String> queue = new ArrayDeque<>();
-        Queue<Integer> count = new ArrayDeque<>();
-        boolean[] visited = new boolean[words.length+1];
+        Queue<Integer> cnt = new ArrayDeque<>();
         queue.offer(begin);
-        count.offer(0);
+        cnt.offer(0);
+        boolean[] visited = new boolean[words.length];
         while(!queue.isEmpty()) {
             String cur = queue.poll();
-            int cnt = count.poll();
-            if (cur.equals(target)) return cnt;
-            
+            int cur_cnt = cnt.poll();
             for (int i = 0; i < words.length; i++) {
-                String word = words[i];
-                if(isPossible(cur, word) && !visited[i]) {
+                if (check(cur, words[i]) && !visited[i]) {
+                    queue.offer(words[i]);
                     visited[i] = true;
-                    queue.offer(word);
-                    count.offer(cnt + 1);
-                }
+                    cnt.offer(cur_cnt+1);
+                    if (target.equals(words[i])) return cur_cnt+1;
+                } 
             }
+            
         }
+        
+        
+        
+        
         return 0;
     }
     
-    boolean isPossible(String x, String y) {
-        int cnt = 0;
-        for (int i = 0; i < x.length(); i++) {
-            if (x.charAt(i) == y.charAt(i)) cnt++;
+    boolean check(String a, String b) {
+        
+        int n = 0;
+        
+        for (int i = 0;  i < a.length(); i++) {
+            if (a.charAt(i) == b.charAt(i)) n++;
         }
         
-        if (cnt == x.length()-1) return true;
-        return false;
+        return n == a.length() - 1;
+        
     }
 }
