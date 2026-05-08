@@ -7,6 +7,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0001-two-sum](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Easy/0001-two-sum/) | Easy |
+| [0200-number-of-islands](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0200-number-of-islands/) | Medium |
 | [0322-coin-change](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0322-coin-change/) | Medium |
 | [0739-daily-temperatures](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0739-daily-temperatures/) | Medium |
 ## Hash Table
@@ -29,11 +30,13 @@
 ## Depth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0200-number-of-islands](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0200-number-of-islands/) | Medium |
 | [0785-is-graph-bipartite](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0785-is-graph-bipartite/) | Medium |
 | [0841-keys-and-rooms](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0841-keys-and-rooms/) | Medium |
 ## Breadth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0200-number-of-islands](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0200-number-of-islands/) | Medium |
 | [0322-coin-change](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0322-coin-change/) | Medium |
 | [0785-is-graph-bipartite](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0785-is-graph-bipartite/) | Medium |
 | [0841-keys-and-rooms](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0841-keys-and-rooms/) | Medium |
@@ -49,5 +52,10 @@
 ## Union-Find
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0200-number-of-islands](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0200-number-of-islands/) | Medium |
 | [0785-is-graph-bipartite](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0785-is-graph-bipartite/) | Medium |
+## Matrix
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0200-number-of-islands](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0200-number-of-islands/) | Medium |
 <!---LeetCode Topics End-->
