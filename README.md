@@ -7,6 +7,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0001-two-sum](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Easy/0001-two-sum/) | Easy |
+| [0322-coin-change](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0322-coin-change/) | Medium |
 | [0739-daily-temperatures](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0739-daily-temperatures/) | Medium |
 ## Hash Table
 | Problem Name | Difficulty |
@@ -32,9 +33,14 @@
 ## Breadth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0322-coin-change](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0322-coin-change/) | Medium |
 | [0841-keys-and-rooms](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0841-keys-and-rooms/) | Medium |
 ## Graph Theory
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0841-keys-and-rooms](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0841-keys-and-rooms/) | Medium |
+## Dynamic Programming
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0322-coin-change](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0322-coin-change/) | Medium |
 <!---LeetCode Topics End-->
