@@ -32,6 +32,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0200-number-of-islands](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0200-number-of-islands/) | Medium |
+| [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0236-lowest-common-ancestor-of-a-binary-tree/) | Medium |
 | [0785-is-graph-bipartite](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0785-is-graph-bipartite/) | Medium |
 | [0841-keys-and-rooms](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0841-keys-and-rooms/) | Medium |
 ## Breadth-First Search
@@ -61,4 +62,12 @@
 | ------- | ------- |
 | [0200-number-of-islands](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0200-number-of-islands/) | Medium |
 | [1091-shortest-path-in-binary-matrix](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/1091-shortest-path-in-binary-matrix/) | Medium |
+## Tree
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0236-lowest-common-ancestor-of-a-binary-tree/) | Medium |
+## Binary Tree
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/JungwooMoon/Algorithm/tree/main/LeetCode/Medium/0236-lowest-common-ancestor-of-a-binary-tree/) | Medium |
 <!---LeetCode Topics End-->
