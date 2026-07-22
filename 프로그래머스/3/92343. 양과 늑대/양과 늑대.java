@@ -41,7 +41,7 @@ class Solution {
                 n_sheep++;
             } else {
                 n_wolf++;
-                if (n_sheep == n_wolf) continue;
+                if (n_sheep <= n_wolf) continue;
             }
 
             for (int can : candidate) {
@@ -50,10 +50,7 @@ class Solution {
 
             max = Math.max(dfs(n_sheep, n_wolf, nextCandidate, tree, info), max);
             
-            for (int can : candidate) {
-                nextCandidate.remove(can);
-            }
-            
+          
         } 
         
         return max;
